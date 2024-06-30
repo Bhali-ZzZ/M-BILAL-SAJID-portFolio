@@ -9,7 +9,7 @@ import { toast } from 'react-toastify'
 
 const Login = () => {
 
-
+    const {url} = useAuth()
     const navigate = useNavigate()
     const {storeTokenInLS} = useAuth()
 
@@ -29,7 +29,7 @@ const Login = () => {
       console.log(user);
     
       try {
-        const response = await axios.post("http://localhost:4000/api/user/userLogin", user);
+        const response = await axios.post(`${url}/api/user/userLogin`, user);
     
         if (response.data.success) {
           // Clear user input fields
