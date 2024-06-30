@@ -1,7 +1,7 @@
 import validator from "validator";
 import regModel from "../models/regModel.js";
-import bcrypt from 'bcryptjs'
-import jwt from 'jsonwebtoken'
+import bcryptjs from 'bcryptjs'; // Import bcryptjs instead of bcrypt
+import jwt from 'jsonwebtoken';
 
 const registrationUser = async (req, res) => {
     const { name, email, phone, password } = req.body;
@@ -18,11 +18,11 @@ const registrationUser = async (req, res) => {
             return res.json({ success: false, message: "Enter a strong password" });
         }
 
-        const hashed_password = await bcrypt.hash(password, 10);
+        const hashed_password = await bcryptjs.hash(password, 10); // Use bcryptjs.hash
         const newUser = new regModel({
             name: name,
             email: email,
-            phone:phone,
+            phone: phone,
             password: hashed_password
         });
         const newOne = await newUser.save();
@@ -40,9 +40,6 @@ const createToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET_KEY);
 }
 
-
-
-//user login
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
 
@@ -53,7 +50,7 @@ const loginUser = async (req, res) => {
             return res.json({ success: false, message: "Invalid email or password" });
         }
         
-        const isPasswordValid = await bcrypt.compare(password, user.password);
+        const isPasswordValid = await bcryptjs.compare(password, user.password); // Use bcryptjs.compare
         if (!isPasswordValid) {
             return res.json({ success: false, message: "Invalid email or password" });
         }
@@ -66,25 +63,20 @@ const loginUser = async (req, res) => {
     }
 };
 
-// user verification and get data
-   
 const user = async (req, res) => {
-
-    
     try {
-      // Access user data from the request object
-      const userData = req.user;
-      
-      // Use userData to retrieve additional information from the database if needed
-      const userFromDB = await regModel.findById(userData.id);
-      
-      // Respond with the user data
-      res.json({ success: true, userFromDB });
+        // Access user data from the request object
+        const userData = req.user;
+        
+        // Use userData to retrieve additional information from the database if needed
+        const userFromDB = await regModel.findById(userData.id);
+        
+        // Respond with the user data
+        res.json({ success: true, userFromDB });
     } catch (error) {
-      console.error("Error in user:", error);
-      res.status(500).json({ success: false, message: "Internal server error" });
+        console.error("Error in user:", error);
+        res.status(500).json({ success: false, message: "Internal server error" });
     }
-  };
-  
+};
 
-export { user ,registrationUser , loginUser} ;
+export { user, registrationUser, loginUser };
