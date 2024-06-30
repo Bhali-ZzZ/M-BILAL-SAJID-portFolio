@@ -13,9 +13,6 @@ import Logout from './pages/Logout/Logout'
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AdminLayout from './Components/AdminLayout/AdminLayout'
-import AdminUsers from './pages/AdminUsers/AdminUsers'
-import AdminContacts from './pages/AdminContacts/AdminContacts'
 import Footer from './pages/Footer/Footer'
 
 
@@ -35,10 +32,6 @@ const App = () => {
           <Route path='/login' element={<Login/>}/>
           <Route path='/registeration' element={<Registeration/>}/>
           <Route path='*' element={<Error/>} />
-          <Route path='/admin' element={<AdminLayout/>}>
-            <Route path='users' element={<AdminUsers/>}/>
-            <Route path='contacts' element={<AdminContacts/>}/>
-          </Route>
         </Routes>
         <Footer/>
       </BrowserRouter>
