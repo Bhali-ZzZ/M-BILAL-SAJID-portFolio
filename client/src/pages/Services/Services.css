@@ -1,0 +1,44 @@
+#services{
+    margin-top: 30px;
+    color: white;
+}
+#services .container .service-title{
+    color: #fff; /* Text color */
+    -webkit-text-stroke-width: 3px; /* Stroke width */
+    -webkit-text-stroke-color: #000; /* Stroke color */
+    font-weight: bold; /* Adjust font weight as needed */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px white;
+}
+#services .container .row .my-services{
+    border: 2px solid white;
+    justify-content: center;
+    margin-top: 20px;
+    height: 400px;
+}
+#services .container .row .my-services .provider{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    color: #545151;
+}
+#services .container .row .my-services .desc{
+    text-align: justify;
+    margin: 20px 30px 0;
+}
+#services .container .row .my-services h3{
+    text-align: center;
+}
+#services .container .row .my-services .service-img{
+    text-align: center;
+}
+#services .container .row .my-services .service-img img{
+    width: 200px;
+    height: 200px;
+  
+}
+@media (min-width: 990px) and (max-width: 1200px) {
+    #services .container .row .my-services{
+        height: 450px;
+    }
+}

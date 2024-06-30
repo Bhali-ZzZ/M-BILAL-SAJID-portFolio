@@ -1,0 +1,86 @@
+#login{
+    margin: 40px 0;
+}
+#login .left img{
+    width: 400px;
+    height: 400px;
+}
+#login .right h1{
+    color: #fff; /* Text color */
+    -webkit-text-stroke-width: 3px; /* Stroke width */
+    -webkit-text-stroke-color: #000; /* Stroke color */
+    font-weight: bold; /* Adjust font weight as needed */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px white;
+}
+#login .right .form-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 5px 0;
+}
+#login .right .form-inputs label{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#login .right .form-inputs input{
+    background-color: rgb(30, 29, 29);
+    padding: 6px 20px;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+}
+#login .right button{
+    font-size: 15px;
+    padding: 5px 10px;
+    /* color: #00f; */
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+
+    
+    color: #fff; /* Text color */
+    -webkit-text-stroke-width: 1px; /* Stroke width */
+    -webkit-text-stroke-color: #000; /* Stroke color */
+    font-weight: bold; /* Adjust font weight as needed */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px white;
+
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#login .right button:hover {
+    box-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+}
+
+#login .right button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00f;
+    animation: neon-border 1.5s infinite;
+}
+
+@keyframes neon-border {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #00f;
+    }
+}
+

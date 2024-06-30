@@ -1,0 +1,132 @@
+.about .container{
+   margin-top: 20px;
+   color: white;
+}
+.about .container .owner-welcome{
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #fff, 
+        0 0 20px #ff00ff, /* light pink */
+        0 0 30px #ff00ff, 
+        0 0 40px #00ffff, /* sky blue */
+        0 0 50px #00ffff, 
+        0 0 60px #0000ff; /* blue */
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+.about .container .owner-welcome span{
+    font-size: 23px;
+    color: #f10b0b;
+    font-weight: 800;
+    text-transform: capitalize;
+    text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #fff, 
+        0 0 20px #ff00ff, /* light pink */
+        0 0 30px #ff00ff, 
+        0 0 40px #00ffff, /* sky blue */
+        0 0 50px #00ffff, 
+        0 0 60px #0000ff; /* blue */
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 
+            0 0 5px #fff, 
+            0 0 10px #fff, 
+            0 0 20px #ff00ff, /* light pink */
+            0 0 30px #ff00ff, 
+            0 0 40px #00ffff, /* sky blue */
+            0 0 50px #00ffff, 
+            0 0 60px #0000ff; /* blue */
+    }
+    50% {
+        text-shadow: 
+            0 0 10px #fff, 
+            0 0 20px #ff00ff, /* light pink */
+            0 0 30px #ff00ff, 
+            0 0 40px #00ffff, /* sky blue */
+            0 0 50px #00ffff, 
+            0 0 60px #0000ff, /* blue */
+            0 0 70px #0000ff;
+    }
+    100% {
+        text-shadow: 
+            0 0 5px #fff, 
+            0 0 10px #fff, 
+            0 0 20px #ff00ff, /* light pink */
+            0 0 30px #ff00ff, 
+            0 0 40px #00ffff, /* sky blue */
+            0 0 50px #00ffff, 
+            0 0 60px #0000ff; /* blue */
+    }
+}
+
+.about .container h1{
+    color: #fff; /* Text color */
+    -webkit-text-stroke-width: 3px; /* Stroke width */
+    -webkit-text-stroke-color: #000; /* Stroke color */
+    font-weight: bold; /* Adjust font weight as needed */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px white;
+}
+.about .container .row .about-me{
+    margin: 30px 0;
+}
+.about .container .row .about-me ul{
+    list-style: none;
+}
+.about .container .row .about-me ul li b{
+    color: #00ffff;
+}
+.about .container .row .about-me ul li{
+    text-align: justify;
+    margin-top: 10px;
+}
+.about .container .row .about-image{
+    display: flex;
+    justify-content: center;
+}
+.about .container .row .about-image img{
+    height: 300px;
+    border: 2px solid white;
+    border-style: groove;
+    filter:   saturate(190%) ; 
+    filter: 
+                drop-shadow(5px 5px 10px rgba(247, 243, 243, 0.5))
+                saturate(200%)
+                sepia(20%)
+                brightness(80%) ;
+}
+/* ---------------location------------------ */
+#location{
+    margin: 20px 0;
+}
+#location h1{
+    margin: 20px 0;
+    color: #fff; /* Text color */
+    -webkit-text-stroke-width: 3px; /* Stroke width */
+    -webkit-text-stroke-color: #000; /* Stroke color */
+    font-weight: bold; /* Adjust font weight as needed */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px white;
+}
+#location .location{
+    text-align: center;
+}
+
+/* #location .container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+  } */
+  
+  #location .location {
+    width: 100%; /* Ensure the location div takes the full width of the container */
+    display: flex;
+    justify-content: center; /* Centers the iframe horizontally within the location div */
+  }
+  

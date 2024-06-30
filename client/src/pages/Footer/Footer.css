@@ -1,0 +1,65 @@
+
+/* =-------------------footer----------------------- */
+#footer {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    color: white;
+}
+#footer .container .row span{
+    color: greenyellow;
+}
+#footer .container .row .footer-left{
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+}
+#footer .container .row .footer-right{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+#footer .container .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 30px; /* Add space between the icons */
+    padding: 20px; /* Optional: add padding around the container */
+  }
+  
+  #footer .container .social-icons svg {
+    width: 25px; /* Adjust the size of the icons as needed */
+    height: 25px; /* Adjust the size of the icons as needed */
+  }
+  #footer .container .social-icons a:hover{
+    transform: translateY(-10px);
+    transition: .5s;
+  }
+
+  #footer .container .footer-box-parent{
+    background-color: rgb(117, 113, 113);
+    width: 190px;
+    height: 160px;
+  }
+
+  #footer .container .footer-box{
+    background-color: rgb(26, 25, 25);
+    width: 180px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer .container .footer-box p{
+    font-size: 13px;
+  }
+  #footer .container .footer-box svg{
+    color: yellow;
+    width: 40px;
+  }
+
+
+  
+ 

@@ -1,0 +1,125 @@
+#error-page{
+    margin: 30px 0;
+}
+#error-page .container .error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#error-page .container .error h1{
+    font-size: 200px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #fff, 
+        0 0 20px #ff00ff, /* light pink */
+        0 0 30px #ff00ff, 
+        0 0 40px #00ffff, /* sky blue */
+        0 0 50px #00ffff, 
+        0 0 60px #0000ff; /* blue */
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 
+            0 0 5px #fff, 
+            0 0 10px #fff, 
+            0 0 20px #ff00ff, /* light pink */
+            0 0 30px #ff00ff, 
+            0 0 40px #00ffff, /* sky blue */
+            0 0 50px #00ffff, 
+            0 0 60px #0000ff; /* blue */
+    }
+    50% {
+        text-shadow: 
+            0 0 10px #fff, 
+            0 0 20px #ff00ff, /* light pink */
+            0 0 30px #ff00ff, 
+            0 0 40px #00ffff, /* sky blue */
+            0 0 50px #00ffff, 
+            0 0 60px #0000ff, /* blue */
+            0 0 70px #0000ff;
+    }
+    100% {
+        text-shadow: 
+            0 0 5px #fff, 
+            0 0 10px #fff, 
+            0 0 20px #ff00ff, /* light pink */
+            0 0 30px #ff00ff, 
+            0 0 40px #00ffff, /* sky blue */
+            0 0 50px #00ffff, 
+            0 0 60px #0000ff; /* blue */
+    }
+}
+#error-page .container .error h5{
+    color: #fff; /* White text */
+    text-shadow:
+        -1px -1px 0 #00f,  
+        1px -1px 0 #00f,
+        -1px 1px 0 #00f,
+        1px 1px 0 #00f,
+        0 0 5px #00f,
+        0 0 10px #00f,
+        0 0 15px #00f,
+        0 0 20px #00f;
+}
+#error-page .container .error p{
+    width: 40%;
+    margin: auto;
+   color: white;
+}
+#error-page .container .error .my-btn{
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    margin: auto;
+}  
+#error-page .container .error .buttons {
+    display: inline-block; /* Make the link behave like a button */
+    font-size: 15px;
+    padding: 5px 10px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #00f;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+    text-decoration: none; /* Remove underline */
+}
+
+#error-page .container .error .buttons:hover {
+    box-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+}
+
+#error-page .container .error .buttons::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00f;
+    animation: neon-border 1.5s infinite;
+    pointer-events: none; /* Ensure the pseudo-element does not interfere with clicking */
+}
+
+@keyframes neon-border {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #00f;
+    }
+}
