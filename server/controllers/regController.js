@@ -1,6 +1,6 @@
 import validator from "validator";
 import regModel from "../models/regModel.js";
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
 const registrationUser = async (req, res) => {

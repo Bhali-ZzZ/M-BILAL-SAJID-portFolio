@@ -10,7 +10,7 @@ import adminContactRouter from './routes/adminRoute.js'
 import projectRouter from './routes/projectRoute.js'
 
 
-const port = 4000
+const port = process.env.PORT || 4000
 const app = express()
 
 // const corsOptions = {
