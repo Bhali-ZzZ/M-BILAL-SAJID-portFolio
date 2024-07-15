@@ -128,6 +128,22 @@
         border-left-color: rgba(0, 0, 255, 1);
     }
 }
+@media (max-width: 500px) {
+    .image-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .image-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .neon-border {
+        font-size: 16px;
+        padding: 3px 5px;
+    }
+}
 /* ----------------my self-------------- */
 #myself{
     margin: 30px 0;
@@ -162,6 +178,12 @@
 @media (min-width:760px) and (max-width:1000px) {
     #myself .container .row .low img{
         width: 300px;
+    }
+}
+@media (max-width: 500px) {
+    #myself .container .row .low img {
+        width: 200px;
+        height: auto; /* Ensure the aspect ratio is maintained */
     }
 }
 
