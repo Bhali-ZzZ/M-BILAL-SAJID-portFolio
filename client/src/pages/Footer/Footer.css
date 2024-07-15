@@ -59,6 +59,25 @@
     color: yellow;
     width: 40px;
   }
+  @media (max-width: 500px) {
+    #footer .container .footer-box-parent {
+      width: 140px;
+      height: 120px;
+    }
+  
+    #footer .container .footer-box {
+      width: 130px;
+      height: 110px;
+    }
+  
+    #footer .container .footer-box p {
+      font-size: 11px;
+    }
+  
+    #footer .container .footer-box svg {
+      width: 30px;
+    }
+  }
 
 
   
