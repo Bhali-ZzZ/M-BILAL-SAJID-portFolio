@@ -5,6 +5,15 @@
     width: 400px;
     height: 400px;
 }
+@media (max-width: 500px) {
+    #registeration .left img {
+        width: 250px;
+        height: 250px;
+    }
+    #registeration .right h1{
+        font-size: 30px;
+    }
+}
 #registeration .right h1{
     color: #fff; /* Text color */
     -webkit-text-stroke-width: 3px; /* Stroke width */

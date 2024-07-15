@@ -158,6 +158,17 @@
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px white;
 }
+@media (max-width:500px) {
+    #myself .container h1{
+        font-size: 30px;
+    }
+    #myself .container .row .up h4{
+        font-size: 20px;
+    }
+    #myself .container .row .up p{
+        font-size: 14px;
+    }
+}
 #myself .container .row{
     margin-bottom: 40px;
 }
