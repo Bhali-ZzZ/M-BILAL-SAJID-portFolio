@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Food Delivery",
+      "description": "A responsive web application for ordering and delivering food.",
+      "image": "food",
+      "link": "https://food-b-frontend.onrender.com/"
+    },
+    {
+      "name": "Spotify Clone",
+      "description": "A clone of the Spotify web application with music streaming features.",
+      "image": "spotify",
+      "link": "https://spotifyclonebybilal.onrender.com/"
+    },
+    {
+      "name": "Attendance Management System",
+      "description": "A system for tracking and managing attendance records.",
+      "image": "ams",
+      "link": "https://amsbybilal.onrender.com/"
+    },
+    {
+      "name": "JWT Authorization",
+      "description": "A secure implementation of JWT-based user authentication.",
+      "image": "jwt",
+      "link": "https://jwtauthenticationuser.onrender.com/"
+    },
+    {
+      "name": "Fitness Website",
+      "description": "A website offering fitness programs and tracking progress.",
+      "image": "gym",
+      "link": "https://fitnessbhali.netlify.app/"
+    },
+    {
+      "name": "No Hate",
+      "description": "Each can only share the love.The hate button tells not to choose it.",
+      "image": "love",
+      "link": "https://lovewithbilli.netlify.app/"
+    }
+  ]
+  

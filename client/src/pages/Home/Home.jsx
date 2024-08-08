@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Home.css';
 import myself from "../../assets/myself.png";
 import html from "../../assets/html-icon.png";
@@ -9,31 +9,27 @@ import react from "../../assets/react-icon.png";
 import mongo from "../../assets/mongo-icon.png";
 import express from "../../assets/express-icon.png";
 import node from "../../assets/node-icon.png";
-import { useAuth } from '../Context/AuthContext';
-import axios from 'axios';
 import mern from '../../assets/mern.png'
+import projects from "../../Components/projects.json"
+import food from "../../assets/hostel.jpeg"
+import spotify from "../../assets/spotify.jpeg"
+import ams from "../../assets/ams.png"
+import gym from "../../assets/gym.jpeg"
+import love from "../../assets/love.jpeg"
+import jwt from "../../assets/jwt.jpeg"
+
 
 const Home = () => {
-    const [projects, setProjects] = useState([]);
-    const { url } = useAuth();
 
-    const fetchProjects = async () => {
-        try {
-            const response = await axios.get(`${url}/api/projects/data`);
-            if (response.data.success) {
-                console.log(response.data.myProjects); // Log the fetched projects
-                setProjects(response.data.myProjects);
-            } else {
-                console.log('Data fetch was not successful');
-            }
-        } catch (error) {
-            console.error('Error fetching projects:', error);
-        }
-    };
-
-    useEffect(() => {
-        fetchProjects();
-    }, []);
+    const imageMap = {
+        food : food , 
+        spotify : spotify , 
+        ams : ams , 
+        jwt : jwt , 
+        gym : gym , 
+        love : love
+      };
+ 
 
     return (
         <div>
@@ -215,21 +211,53 @@ const Home = () => {
             </section>
             {/* -------------completed projects-------------- */}
             <section id='projects'>
-                <div className='container'>
-                    <h1>COMPLETED PROJECTS</h1>
-                    <div className='row'>
-                        {projects.map((project) => (
-                            <div className='col-md-6 col-lg-4' key={project._id}>
-                                <div className='project'>
-                                    <h6>{project.name}</h6>
-                                    <p>{project.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    <hr/>
-                </div>
-            </section>
+  <div className='container'>
+    <h1>COMPLETED PROJECTS</h1>
+    <div className='row'>
+      {projects.map((project, index) => (
+        <div className='col-md-6 col-lg-4' key={index}>
+          <div
+            onClick={() => window.open(project.link, "_blank")} // Opens the link in a new tab
+            className='project'
+            style={{
+              backgroundImage: `url(${imageMap[project.image]})`,
+              backgroundSize: 'cover', // Cover the entire div
+              backgroundPosition: 'center', // Center the image
+              height: '200px', // Example height, adjust as needed
+              color: 'white', // Text color
+              padding: '20px', // Padding for text
+              display: 'flex', // Flexbox for centering content
+              alignItems: 'center', // Center items vertically
+              justifyContent: 'center', // Center items horizontally
+              textAlign: 'center' // Center text
+            }}
+          >
+            <h6
+    style={{
+      textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)', // Stronger and larger shadow for more visible stroke
+      fontSize: '1.5rem',
+      zIndex: 1
+    }}
+  >
+    {project.name}
+  </h6>
+  <p
+    style={{
+      textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)', // Stronger and larger shadow for more visible stroke
+      fontSize: '1rem',
+      zIndex: 1
+    }}
+  >
+    {project.description}
+  </p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <hr />
+  </div>
+</section>
+
         </div>
     );
 };

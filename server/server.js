@@ -6,8 +6,7 @@ import 'dotenv/config'
 import contactRouter from './routes/contactRoute.js'
 import serviceRouter from './routes/serviceRoute.js'
 import adminRouter from './routes/adminRoute.js'
-import adminContactRouter from './routes/adminRoute.js'
-import projectRouter from './routes/projectRoute.js'
+
 
 
 const port = process.env.PORT || 4000
@@ -34,7 +33,7 @@ app.use("/api/form",contactRouter)
 app.use("/api/services",serviceRouter)
 app.use("/api/admin",adminRouter)
 app.use("/api/admincontact",adminRouter)
-app.use("/api/projects",projectRouter)
+
 
 
 app.get("/",(req,res)=>{
