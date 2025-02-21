@@ -55,7 +55,11 @@ const Home = () => {
                 <div className='row'>
                 <div className='col-md-6 up'>
                 <h4>I'M <span>M BILAL SAJID,</span></h4>
-                <p>I am a dedicated undergraduate student at COMSATS University Islamabad, Sahiwal Campus, currently in my 6th semester with a CGPA of 3.80/4. As a front-end developer, I have honed my skills in HTML, CSS, JavaScript, Bootstrap, and React. Additionally, I have gained hands-on experience in full-stack development with Node.js, Express, and MongoDB.</p>
+                <p>I am Muhammad Bilal Sajid, a passionate MERN Stack Developer
+with 3 years of experience in web development and 1 year of
+expertise in the MERN stack. I am currently pursuing BS Computer
+Science at COMSATS University Islamabad (Sahiwal Campus) in my
+7th semester, with a CGPA of 3.86/4.</p>
                 </div>
                 <div className='col-md-6 low'>
                     <img src={mern} alt='pic'/>
